@@ -35,16 +35,18 @@ With all this done, the ATTiny85 could now be programmed from the Arduino IDE us
 To program the ATTiny85 I am using the [ATTinyCore](https://github.com/SpenceKonde/ATTinyCore) which recommneds using Arduino IDE 1.8.13. This core also comes with a copy of [tinyNeoPixel](https://github.com/SpenceKonde/tinyNeoPixel) which I use to control the RGB LEDs. No other libraries are needed for this project.
 
 Configure the board settings as follows:
- |Arduino Board:|Configuration (with Bootloader)|
- |Board:|ATTiny85 (Micronucleus / DigiSpark)|
- |Clock:|16MHz|
- |Timer1 Clock:|CPU|
- |LTO:|enabled|
- |millis()/micros():|enabled|
- |Burn Bootloader Method:|upgrade (via USB)|
- |Reset Pin:|GPIO|
- |BOD Level:|disabled|
- |Programmer:|micronucleus|
+|Setting|Value|
+|---|---|
+|Arduino Board|Configuration (with Bootloader)|
+|Board|ATTiny85 (Micronucleus / DigiSpark)|
+|Clock|16MHz|
+|Timer1 Clock|CPU|
+|LTO|enabled|
+|millis()/micros()|enabled|
+|Burn Bootloader Method|upgrade (via USB)|
+|Reset Pin|GPIO|
+|BOD Level|disabled|
+|Programmer|micronucleus|
 
 # Fuse Reset
 <img src="images/fuse_reset_setup.jpg" width="80%">
@@ -54,7 +56,3 @@ I encountered a situation where I could no longer program the ATTiny85 via Micro
 Based on instructions from this [ATTiny Fuse Reset web page](https://sites.google.com/site/wayneholder/attiny-fuse-reset) I uploaded the reset fuse sketch to an Arduino Nano and then hooked it up to the ATTiny85 o0n a breadboard using the schematic provided on the site. I supplied 12V to the reset pin via a 1k resistor from my bench power supply. An NPN transistor is added to pull pin 1 to ground when needed by the fuse reset sketch. With this setup I was able to reset the fuses on the ATTiny85. I was then able to reinstall the bootloader and I was back in business.
 
 The origins of the fuse reset sketch are a bit murky, but I believe the version I used originates from [this blog post by Paul Willoughby](https://www.rickety.us/2010/03/arduino-avr-high-voltage-serial-programmer/).
-
-
-
-
