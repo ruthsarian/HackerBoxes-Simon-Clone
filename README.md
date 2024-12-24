@@ -18,6 +18,8 @@ I have since found that this PCB came from [HackerBoxes #0044](https://hackerbox
 Power on the device with the power switch. It will go through a brief intro to let you know it's working. Then press one of the four button to select a difficulty level. The top-left is the lowest difficulty. Difficulty increases with the bottom-left, then bottom-right, then top-right for highest difficulty. Once the game is over it will wait for you to start a new game by selecting a difficulty level. 
 
 # Programming Setup
+<img src="images/usbasp_programmer_setup.jpg" width="100%">
+
 There are no programming headers on the PCB. The ATTiny85 will need to be programmed before being installed into the PCB. I installed a [DIP-8 socket](https://www.ebay.com/sch/i.html?_nkw=DIP-8+socket&_sacat=0) onto the PCB to make removing the ATTiny85 for reprogramming quick and easy.
 
 I used a [USBasp programmer](https://www.amazon.com/s?k=usbasp) and an [ATTiny85 break-out board](https://www.ebay.com/sch/i.html?_nkw=attiny85+dip-8+usb&_sacat=0) to initially program the [ATTiny85](https://ww1.microchip.com/downloads/en/devicedoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf) with the [Micronucleus bootloader](https://github.com/micronucleus/micronucleus). The USBasp may require some [extra setup to get it working](https://www.instructables.com/USBASP-Installation-in-Windows-10/). Once the bootloader was installed on the ATTiny85 I was able to use just the break-out board to program it. 
