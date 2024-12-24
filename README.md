@@ -1,5 +1,5 @@
 # HackerBoxes Simon Clone
-<img src="images/completed_pcb.jpg" width="100%">
+<img src="images/completed_pcb.jpg" width="100%" alt="The assembled PCB sits in front of a cardboard box with the label 'surplus surprise' on it. The PCB is rectangular with a small, tactile button at each corner. Next to the top-left button is an ATTiny85 in a DIP-8 socket. Next to the top-right button is a sliding switch for power. There's a circle divided into quandrants in the middle of the PCB with a single, 5mm RGB LED in the middle of each quandrant. The leads for each RGB LED are twisted and turned 90 degrees. In the very center of the circle is a piezo buzzer.">
 
 I purchased a [Surpluse Surprise Box](https://hackerboxes.com/collections/subscriptions/products/surplus-surprise-box) from [HackerBoxes](https://hackerboxes.com/). Within that box was a PCB for what appeared to be a [Simon](https://en.wikipedia.org/wiki/Simon_(game)) clone. I decided to use this as an opportunity to exercise some basic PCB reverse engineering and software development skills. Without referring to any HackerBoxes documentation, I identified the components necessary to assemble the PCB and wrote this firmware for it. 
 
@@ -18,7 +18,7 @@ I have since found that this PCB came from [HackerBoxes #0044](https://hackerbox
 Power on the device with the power switch. It will go through a brief intro to let you know it's working. Then press one of the four button to select a difficulty level. The top-left is the lowest difficulty. Difficulty increases with the bottom-left, then bottom-right, then top-right for highest difficulty. Once the game is over it will wait for you to start a new game by selecting a difficulty level. 
 
 # Programming Setup
-<img src="images/usbasp_programmer_setup.jpg" width="100%">
+<img src="images/usbasp_programmer_setup.jpg" width="100%" alt="The project PCB is at the bottom-right with a large portion of it out of shot. Above and to the left of that PCB is a an ATTiny85 breakout board with an ATTiny85 in a DIP-8 socket. The breakout board has a micro-usb connector and a 2x8 pin header. 6 of those pins have jumper wires connecting to a USBasp programmer of to the right.">
 
 There are no programming headers on the PCB. The ATTiny85 will need to be programmed before being installed into the PCB. I installed a [DIP-8 socket](https://www.ebay.com/sch/i.html?_nkw=DIP-8+socket&_sacat=0) onto the PCB to make removing the ATTiny85 for reprogramming quick and easy.
 
@@ -51,7 +51,7 @@ Configure the board settings as follows:
 |Programmer|micronucleus|
 
 # Fuse Reset
-<img src="images/fuse_reset_setup.jpg" width="100%">
+<img src="images/fuse_reset_setup.jpg" width="100%" alt="There is a small breadboard with an Arduino Nano on the left side of it. On the right side of the breadboard is a bare ATTiny85. Between the two are several 1k resistors and jumper wires connecting them. The project PCB is off to the top-right and out of focus. At the bottom are two wires coming off the breadboard and connected to leads that go off to a bench power supply that is out of shot.">
 
 I encountered a situation where I could no longer program the ATTiny85 via Micronucleus; something had become corrupted and the bootloader no longer functioned. In order to reprogram the ATTiny85 I would need to reset the fuses on it to enable the reset pin. This is possible on an ATTiny85 by using high voltage serial programming. 
 
