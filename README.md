@@ -1,5 +1,5 @@
 # HackerBoxes Simon Clone
-<img src="images/completed_pcb.jpg" width="80%">
+<img src="images/completed_pcb.jpg" width="100%">
 
 I purchased a [Surpluse Surprise Box](https://hackerboxes.com/collections/subscriptions/products/surplus-surprise-box) from [HackerBoxes](https://hackerboxes.com/). Within that box was a PCB for what appeared to be a [Simon](https://en.wikipedia.org/wiki/Simon_(game)) clone. I decided to use this as an opportunity to exercise some basic PCB reverse engineering and software development skills. Without referring to any HackerBoxes documentation, I identified the components necessary to assemble the PCB and wrote this firmware for it. 
 
@@ -49,7 +49,7 @@ Configure the board settings as follows:
 |Programmer|micronucleus|
 
 # Fuse Reset
-<img src="images/fuse_reset_setup.jpg" width="80%">
+<img src="images/fuse_reset_setup.jpg" width="100%">
 
 I encountered a situation where I could no longer program the ATTiny85 via Micronucleus; something had become corrupted and the bootloader no longer functioned. In order to reprogram the ATTiny85 I would need to reset the fuses on it to enable the reset pin. This is possible on an ATTiny85 by using high voltage serial programming. 
 
